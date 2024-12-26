@@ -29,12 +29,6 @@ namespace Application.Activities
 
                 _mapper.Map(request.Activity, activity);
 
-                activity.Title = request.Activity.Title ?? activity.Title;
-                activity.Description = request.Activity.Description ?? activity.Description;
-                activity.Venue = request.Activity.Venue ?? activity.Venue;
-                activity.City = request.Activity.City ?? activity.City;
-                // activity.Date = request.Activity.Date ?? activity.Date;
-
                 await _context.SaveChangesAsync();
             }
         }
